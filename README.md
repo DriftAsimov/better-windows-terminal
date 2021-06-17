@@ -46,15 +46,15 @@ You can modify many assets of your terminal just by editing the `settings.json` 
     ```json
     "defaults": 
     {
-        "acrylicOpacity": 0.90000000000000002,      // acrylic overlay opacity
-        "backgroundImage": "path_to_an_image",      // path to background image you want on your terminal
-        "backgroundImageOpacity": 0.25,             // opacity of background image
-        "colorScheme": "Blue Matrix",               // color scheme
-        "experimental.retroTerminalEffect": false,  // retro effects
-        "fontFace": "Cascadia Code PL",             // font family
-        "fontSize": 11,                             // font size
-        "hidden": false,                            // whether the terminal should be hidden
-        "useAcrylic": true                          // whether to use acrylic effects
+        "acrylicOpacity": 0.90000000000000002,    
+        "backgroundImage": "path_to_an_image",     
+        "backgroundImageOpacity": 0.25,            
+        "colorScheme": "Blue Matrix",  
+        "experimental.retroTerminalEffect": false, 
+        "fontFace": "Cascadia Code PL",           
+        "fontSize": 11,                       
+        "hidden": false,                  
+        "useAcrylic": true     
     },
     ```
 
@@ -86,7 +86,7 @@ You can modify many assets of your terminal just by editing the `settings.json` 
             "white": "#C7C7C7",
             "yellow": "#FFFC58"
         },
-        {other_schemes_here}
+        {}
     ]
     ```
 
