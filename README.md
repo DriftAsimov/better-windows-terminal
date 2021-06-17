@@ -1,0 +1,165 @@
+# Better Windows Terminal
+
+Are you bored of using the default windows terminal? Have no worries, we have got your back!\
+Special thanks to [this](https://dev.to/anupa/beautify-your-windows-terminal-1la8) post by Anup Aglawe!
+
+### Installing the new terminal
+
+#### Using Microsoft Store
+
+Open Microsoft Store and search for "Windows Terminal". In this way, your terminal will also auto-update without worrying
+
+#### Using Chocolatey
+
+You can also use [Chocolatey](https://docs.chocolatey.org/en-us/choco/setup) to install the new terminal.
+
+* Run `Get-ExecutionPolicy` in Powershell. If it returns `Restricted`, then run `Set-ExecutionPolicy AllSigned` or `Set-ExecutionPolicy Bypass -Scope Process`.
+* Now run: 
+    ```powershell
+    Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager] ::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
+    ```
+* This will configure chocolatey on your system. Now you can install more packages using it. We will use `choco install microsoft-windows-terminal -y` to install the new terminal. The `-y` flag is to skip all confirmation, you can remove this flag for a custom installation.
+
+#### Using winget
+
+People who are using [winget](https://github.com/microsoft/winget-cli) can install the new terminal by running this command:
+```powershell
+winget install --id=Microsoft.WindowsTerminal -e
+```
+
+#### Using scoop
+
+You can also use the famous package manager [scoop](https://scoop.sh/) by running this command:
+```powershell
+scoop bucket add extras
+scoop install windows-terminal
+```
+
+Other methods can be found [here](https://github.com/microsoft/terminal#installing-and-running-windows-terminal).
+
+### Configuring your terminal
+
+You can modify many assets of your terminal just by editing the `settings.json` file. Launch the terminal and then go to settings and hit "Open JSON file" located at the bottom right section. This will open `settings.json` in your default IDE.
+
+* Under profiles list, update the `defaults` profile to the following:
+
+    ```json
+    "defaults": 
+    {
+        "acrylicOpacity": 0.90000000000000002,      // acrylic overlay opacity
+        "backgroundImage": "path_to_an_image",      // path to background image you want on your terminal
+        "backgroundImageOpacity": 0.25,             // opacity of background image
+        "colorScheme": "Blue Matrix",               // color scheme
+        "experimental.retroTerminalEffect": false,  // retro effects
+        "fontFace": "Cascadia Code PL",             // font family
+        "fontSize": 11,                             // font size
+        "hidden": false,                            // whether the terminal should be hidden
+        "useAcrylic": true                          // whether to use acrylic effects
+    },
+    ```
+
+* Since "Blue Matrix" theme is not pre-installed, we will be adding it ourselves. Scroll down in `settings.json` to find a `schemes` list and   update it like this:
+
+    ```json
+    "schemes": 
+    [
+        {
+            "background": "#1D2342",
+            "black": "#101116",
+            "blue": "#00B0FF",
+            "brightBlack": "#686868",
+            "brightBlue": "#6871FF",
+            "brightCyan": "#60FDFF",
+            "brightGreen": "#5FFA68",
+            "brightPurple": "#D682EC",
+            "brightRed": "#FF6E67",
+            "brightWhite": "#FFFFFF",
+            "brightYellow": "#FFFC67",
+            "cursorColor": "#FFFFFF",
+            "cyan": "#76C1FF",
+            "foreground": "#B8FFE1",
+            "green": "#00FF9C",
+            "name": "Blue Matrix",
+            "purple": "#D57BFF",
+            "red": "#FF5680",
+            "selectionBackground": "#B0DCE2",
+            "white": "#C7C7C7",
+            "yellow": "#FFFC58"
+        },
+        {other_schemes_here}
+    ]
+    ```
+
+> NOTE: Since Cascadia Code PL might not be readily installed, install it from [here](https://github.com/microsoft/cascadia-code/releases).
+
+More themes can be found here: https://atomcorp.github.io/themes/
+
+### Linux-like Terminal Setup
+
+* Install [Git](https://git-scm.com/downloads) for windows.
+
+* Install `Post-git` and `Oh-my-posh` by running these scripts in Powershell:
+    ```powershell
+    Install-Module posh-git -Scope CurrentUser
+    Install-Module oh-my-posh -Scope CurrentUser
+    ```
+
+* Open your Powershell profile file with `nvim $PROFILE` or the editor of your choice. If you don't already have a profile file then create one using this command:
+
+    ```powershell
+    if (!(Test-Path -Path $PROFILE)) { New-Item -ItemType File -Path ROFILE -Force }
+    ```
+
+* Now add the following to your profile file:
+    ```powershell
+    Import-Module posh-git
+    Import-Module oh-my-posh
+    Set-PoshPrompt -Theme spaceship
+    ```
+
+    More themes can be found [here](https://github.com/JanDeDobbeleer/oh-my-posh#themes).
+
+* If you get a module not found error then add the following code at the top of your profile file:
+    ```powershell
+    $env:PSModulePath = $env:PSModulePath + "$([System.IO.Path]::PathSeparator)C:\Users\xxxx\Documents\WindowsPowerShell\Modules"
+    ```
+
+### Adding ascii arts to your terminal
+
+You can add your own ascii art or you can use my configs which can be found [here](Microsoft.PowerShell_profile.ps1) in this repo itself.
+
+Your terminal might look like this now:
+
+![Powershell Preview](https://i.imgur.com/R1tTMXo.png)
+
+### Installing neofetch
+
+You can easily install neofetch on windows using scoop like this:
+
+* Install scoop if you haven't already by executing this command:
+    ```powershell
+    Invoke-Expression (New-Object System.Net.WebClient).DownloadString('https://get.scoop.sh')
+    ```
+
+* Now run `scoop help` to check if scoop is installed correctly.
+* Before installing neofetch, you need Git installed using scoop. Run `scoop install git` for that.
+* After this you can run `scoop install neofetch`.
+
+If everything goes well, then executing `neofetch` should output something like this:
+
+![Neofetch Preview](https://i.imgur.com/7exWfFO.png)
+
+### Credits
+
+Thanks to all the blogs referred here:
+
+https://www.neowin.net/news/how-to-install-and-use-neofetch-on-desktop-and-mobile/
+https://dev.to/anupa/beautify-your-windows-terminal-1la8
+https://github.com/microsoft/terminal
+https://github.com/JanDeDobbeleer/oh-my-posh
+https://github.com/dahlbyk/posh-git
+https://github.com/EvotecIT/PSWriteColor
+https://github.com/atomcorp/themes
+
+Background Image:
+<img src = "background.jpg">
