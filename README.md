@@ -161,5 +161,8 @@ https://github.com/dahlbyk/posh-git
 https://github.com/EvotecIT/PSWriteColor
 https://github.com/atomcorp/themes
 
-Background Image:
+You can open an issue on the repo if you face one or make a pull request if you would like to contribute.
+
+##### Background Image:
+
 <img src = "background.jpg">
