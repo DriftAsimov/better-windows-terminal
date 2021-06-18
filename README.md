@@ -58,7 +58,7 @@ You can modify many assets of your terminal just by editing the `settings.json` 
     },
     ```
     
-    > Tip: You can even use gifs are background image.
+    > Tip: You can even use gifs as background image.
 
 * Since "Blue Matrix" theme is not pre-installed, we will be adding it ourselves. Scroll down in `settings.json` to find a `schemes` list and   update it like this:
 
