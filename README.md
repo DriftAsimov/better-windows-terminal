@@ -27,7 +27,7 @@ People who are using [winget](https://github.com/microsoft/winget-cli) can insta
 winget install --id=Microsoft.WindowsTerminal -e
 ```
 
-#### Using scoop
+#### Using [scoop](https://github.com/LeonardSSH/coc-discord-rpc/wiki/install)
 
 You can also use the famous package manager [scoop](https://scoop.sh/) by running this command:
 ```powershell
