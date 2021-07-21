@@ -126,6 +126,25 @@ More themes can be found here: https://atomcorp.github.io/themes/
     $env:PSModulePath = $env:PSModulePath + "$([System.IO.Path]::PathSeparator)C:\Users\xxxx\Documents\WindowsPowerShell\Modules"
     ```
 
+### Running Git in a new profile
+
+The setup is very easy, you just need to install [Git](https://git-scm.com/downloads) and then add this in your `settings.json` profiles dict:
+
+```json
+{
+    "commandline": "C:/Program Files/Git/bin/bash.exe --login",
+    "guid": "{00000000-0000-0000-ba54-000000000002}",
+    "hidden": false,
+    "icon": "%PROGRAMFILES%/Git/mingw64/share/git/git-for-windows.ico",
+    "name": "Git",
+    "startingDirectory": null
+}
+```
+
+If you can't figure it out in the `settings.json` here are the interactive settings:
+
+![image](https://user-images.githubusercontent.com/65854695/126441159-6276f99e-c0ae-499a-b50e-179c5ec3dea4.png)
+
 ### Adding ascii arts to your terminal
 
 You can add your own ascii art or you can use my configs which can be found [here](Microsoft.PowerShell_profile.ps1) in this repo itself.
