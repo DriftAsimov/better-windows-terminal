@@ -109,7 +109,7 @@ More themes can be found here: https://atomcorp.github.io/themes/
 * Open your Powershell profile file with `nvim $PROFILE` or the editor of your choice. If you don't already have a profile file then create one using this command:
 
     ```powershell
-    if (!(Test-Path -Path $PROFILE)) { New-Item -ItemType File -Path ROFILE -Force }
+    if (!(Test-Path -Path $PROFILE)) { New-Item -ItemType File -Path PROFILE -Force }
     ```
 
 * Now add the following to your profile file:
