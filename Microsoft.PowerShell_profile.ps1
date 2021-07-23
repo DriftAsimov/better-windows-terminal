@@ -14,3 +14,7 @@ Write-Color -Text " "
 Import-Module posh-git
 Import-Module oh-my-posh
 Set-PoshPrompt -Theme spaceship
+
+Set-PSReadlineKeyHandler -Key Tab -Function MenuComplete
+Set-PSReadlineKeyHandler -Key UpArrow -Function HistorySearchBackward
+Set-PSReadlineKeyHandler -Key DownArrow -Function HistorySearchForward
