@@ -140,6 +140,10 @@ Set-PSReadlineKeyHandler -Key DownArrow -Function HistorySearchForward
 
 Just typing `nv` and pressing <kbd>↑</kbd> showed  previous `nvim $profile` history and hitting <kbd>Space</kbd> executes that command.
 
+![image](https://user-images.githubusercontent.com/65854695/126737230-7c522c2a-9d3e-44f4-8f36-e91be558b63a.png)
+ 
+ Hitting <kbd>Tab</kbd> after typing `emacs` showed all available options.
+
 ### Running Git in a new profile
 
 The setup is very easy, you just need to install [Git](https://git-scm.com/downloads) and then add this in your `settings.json` profiles dict:
