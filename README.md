@@ -126,6 +126,16 @@ More themes can be found here: https://atomcorp.github.io/themes/
     $env:PSModulePath = $env:PSModulePath + "$([System.IO.Path]::PathSeparator)C:\Users\xxxx\Documents\WindowsPowerShell\Modules"
     ```
 
+#### Autocompletion
+
+Autocompletion is one of the best features of shells. We can add similar functionality to Powershell:
+
+```powershell
+Set-PSReadlineKeyHandler -Key Tab -Function MenuComplete
+Set-PSReadlineKeyHandler -Key UpArrow -Function HistorySearchBackward
+Set-PSReadlineKeyHandler -Key DownArrow -Function HistorySearchForward
+```
+
 ### Running Git in a new profile
 
 The setup is very easy, you just need to install [Git](https://git-scm.com/downloads) and then add this in your `settings.json` profiles dict:
