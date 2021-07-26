@@ -205,3 +205,7 @@ You can open an issue on the repo if you face one or make a pull request if you 
 ##### Background Image:
 
 <img src = "background.jpg">
+
+
+![yay](https://cdn.discordapp.com/emojis/798795579819294740.gif?v=1)
+![uwu terminal](https://i.imgur.com/yqiAJn0.png)
