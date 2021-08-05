@@ -1,7 +1,7 @@
 # Better Windows Terminal
 
 Are you bored of using the default windows terminal? Have no worries, we have got your back!\
-Special thanks to [this](https://dev.to/anupa/beautify-your-windows-terminal-1la8) post by Anup Aglawe! If this repo helps you, you can star it so that it can help more people!
+Special thanks to [this](https://dev.to/anupa/beautify-your-windows-terminal-1la8) post by Anup Aglawe! If this repo helps you, you can ⭐ it so that it can help more people!
 
 ### Installing the new terminal
 
