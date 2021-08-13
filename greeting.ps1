@@ -1,23 +1,18 @@
-Write-Color " "
+Write-Host " "
 
 $script:time = Get-Date -Format "HH"
 $time = $time -as [int]
 
-$script:msg = "$($env:username)-kun!"
+$script:msg = "Drift-kun!"
 
 if ($time -ge 12) {
-    Write-Color -Text "Konnichiwa $($msg)" -Color DarkCyan
+    Write-Host "Konnichiwa $($msg)" -ForegroundColor DarkCyan
 }
 elseif ($time -ge 16) {
-    Write-Color -Text "Konbanwa $($msg)" -Color Cyan
+    Write-Host "Konbanwa $($msg)" -ForegroundColor Cyan
 }
 else {
-    Write-Color -Text "Ohayo $($msg)" -Color DarkYellow
+    Write-Host "Ohayo $($msg)" -ForegroundColor DarkYellow
 }
 
-Write-Color " "
-
-function My
-{
-    cd "E:/Gate of Steiner/Code/"
-}
+Write-Host " "
