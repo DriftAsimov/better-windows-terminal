@@ -3,7 +3,7 @@ Write-Host " "
 $script:time = Get-Date -Format "HH"
 $time = $time -as [int]
 
-$script:msg = "Drift-kun!"
+$script:msg = "$($env:username)-kun!"
 
 if ($time -ge 12) {
     Write-Host "Konnichiwa $($msg)" -ForegroundColor DarkCyan
