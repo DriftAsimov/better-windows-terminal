@@ -190,15 +190,12 @@ If everything goes well, then executing `neofetch` should output something like 
 
 ### Credits
 
-Thanks to all the blogs referred here:
+Thanks to all these sources:
 
-https://www.neowin.net/news/how-to-install-and-use-neofetch-on-desktop-and-mobile/
-https://dev.to/anupa/beautify-your-windows-terminal-1la8
-https://github.com/microsoft/terminal
-https://github.com/JanDeDobbeleer/oh-my-posh
-https://github.com/dahlbyk/posh-git
-https://github.com/EvotecIT/PSWriteColor
-https://github.com/atomcorp/themes
+* [Windows Terminal](https://github.com/microsoft/terminal)
+* [Installing Neofetch](https://www.neowin.net/news/how-to-install-and-use-neofetch-on-desktop-and-mobile/)
+* [Original Post](https://dev.to/anupa/beautify-your-windows-terminal-1la8)
+* [oh-my-posh](https://github.com/JanDeDobbeleer/oh-my-posh)
 
 You can open an issue on the repo if you face one or make a pull request if you would like to contribute.
 
