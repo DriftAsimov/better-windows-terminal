@@ -5,7 +5,7 @@ Special thanks to [this](https://dev.to/anupa/beautify-your-windows-terminal-1la
 
 ### Installing the new terminal
 
-#### Using Microsoft Store
+#### Using Microsoft Store (Recommended)
 
 Open Microsoft Store and search for "Windows Terminal". In this way, your terminal will also auto-update without worrying
 
